@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.49.0'
+project:
+    name: dir_name
+    package:
+        name: dir_name
+        api_version: '52.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/dir_name/tests
+            options:
+                outputdir: robot/dir_name/results
+
+    robot_testdoc:
+        options:
+            path: robot/dir_name/tests
+            output: robot/dir_name/doc/dir_name_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
